@@ -3,7 +3,7 @@ import { Calendar, ArrowRight, Shield, Award, Clock } from "lucide-react"
 import Image from "next/image"
 
 // Default data for fallback
-const defaultData:  = {
+const defaultData  = {
   title: "Your Perfect Smile",
   subtitle: "Starts Here",
   description: "Experience exceptional dental care with our team of expert professionals. We combine cutting-edge technology with compassionate service to give you the smile you've always dreamed of.",
