@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Calendar, ArrowRight, Shield, Award, Clock } from "lucide-react"
-import { HeroFields } from "@/lib/contentful"
 import Image from "next/image"
 
 // Default data for fallback
-const defaultData: HeroFields = {
+const defaultData:  = {
   title: "Your Perfect Smile",
   subtitle: "Starts Here",
   description: "Experience exceptional dental care with our team of expert professionals. We combine cutting-edge technology with compassionate service to give you the smile you've always dreamed of.",
@@ -23,12 +22,10 @@ const iconMap: Record<string, typeof Shield> = {
   clock: Clock,
 }
 
-interface HeroSectionProps {
-  data?: (HeroFields & { imageUrl?: string }) | null
-}
+  
 
-export function HeroSection({ data }: HeroSectionProps) {
-  const content = data || defaultData
+export function HeroSection() {
+  const content =  defaultData
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
