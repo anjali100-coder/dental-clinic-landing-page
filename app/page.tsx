@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { getAllContent } from "@/lib/contentful"
 
-export const revalidate = 60 // Revalidate every 60 seconds
+
 
 export default async function Home() {
   const { hero, services, teamMembers, testimonials, about, siteSettings } = await getAllContent()
