@@ -8,23 +8,23 @@ import { TeamSection } from "@/components/team-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
-import { getAllContent } from "@/lib/contentful"
 
 
 
-export default async function Home() {
-  const { hero, services, teamMembers, testimonials, about, siteSettings } = await getAllContent()
+
+export default function Home() {
+  
 
   return (
     <main className="min-h-screen">
-      <Header siteSettings={siteSettings} />
-      <HeroSection data={hero} />
-      <AboutSection data={about} />
-      <ServicesSection services={services} />
-      <TeamSection teamMembers={teamMembers} />
+      <Header />
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <TeamSection  />
       <TestimonialsSection testimonials={testimonials} />
-      <ContactSection siteSettings={siteSettings} />
-      <Footer siteSettings={siteSettings} />
+      <ContactSection  />
+      <Footer />
     </main>
   )
 }
