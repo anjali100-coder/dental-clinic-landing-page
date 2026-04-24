@@ -26,7 +26,6 @@ export default function Home() {
                   <p className="font-bold text-gray-900 text-lg">Full Protection</p>
                   <p className="text-sm text-gray-600">Shield against infections</p>
                 </div>
-              </div>
               <div className="bg-white rounded-2xl p-5 flex items-center gap-4 shadow-2xl">
                 <div className="bg-blue-100 p-3 rounded-xl text-2xl">👍</div>
                 <div>
@@ -41,7 +40,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      )
-      }
+        )
+        }
     </div>
   )
