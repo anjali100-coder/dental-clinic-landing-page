@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
-import { ServiceFields } from "@/lib/contentful"
+
 
 // Icon components for different service types
 const serviceIcons: Record<string, JSX.Element> = {
@@ -104,12 +104,10 @@ const defaultServices: ServiceFields[] = [
   },
 ]
 
-interface ServicesSectionProps {
-  services?: ServiceFields[]
-}
 
-export function ServicesSection({ services }: ServicesSectionProps) {
-  const serviceList = services && services.length > 0 ? services : defaultServices
+export function ServicesSection() {
+  
+    {
 
   return (
     <section id="services" className="py-20 lg:py-32 bg-secondary/30">
