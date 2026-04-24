@@ -26,6 +26,7 @@ export default function Home() {
                   <p className="font-bold text-gray-900 text-lg">Full Protection</p>
                   <p className="text-sm text-gray-600">Shield against infections</p>
                 </div>
+              </div>
               <div className="bg-white rounded-2xl p-5 flex items-center gap-4 shadow-2xl">
                 <div className="bg-blue-100 p-3 rounded-xl text-2xl">👍</div>
                 <div>
@@ -33,16 +34,84 @@ export default function Home() {
                   <p className="text-sm text-gray-600">Leading dental care</p>
                 </div>
               </div>
-            </div>
             <button className="bg-pink-500 hover:bg-pink-600 text-white px-10 py-4 rounded-full font-semibold text-lg inline-flex items-center gap-3 shadow-xl transition-all hover:scale-105">
               DentiCare Process →
             </button>
           </div>
         </div>
       </div>
-        )
-        }
     </div>
 
 )
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   )
