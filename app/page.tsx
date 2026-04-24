@@ -33,7 +33,6 @@ export default function Home() {
                   <p className="text-sm text-gray-600">Leading dental care</p>
                 </div>
               </div>
-            </div>
             <button className="bg-pink-500 hover:bg-pink-600 text-white px-10 py-4 rounded-full font-semibold text-lg inline-flex items-center gap-3 shadow-xl transition-all hover:scale-105">
               DentiCare Process →
             </button>
@@ -41,5 +40,6 @@ export default function Home() {
         </div>
       </div>
     </div>
-      }
   )
+        }
+        }
