@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Award, Users, Heart } from "lucide-react"
-import { AboutFields } from "@/lib/contentful"
+
 
 const iconMap: Record<string, typeof Award> = {
   award: Award,
@@ -29,12 +29,10 @@ const defaultAbout: AboutFields = {
   ],
 }
 
-interface AboutSectionProps {
-  data?: AboutFields | null
-}
 
-export function AboutSection({ data }: AboutSectionProps) {
-  const content = data || defaultAbout
+
+export function AboutSection() {
+  const content = defaultAbout
 
   return (
     <section id="about" className="py-20 lg:py-32 bg-background">
