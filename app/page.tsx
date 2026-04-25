@@ -1,70 +1,103 @@
 import React from 'react';
 
 export default function Home() {
+  const styles = {
+    nav: {
+      position: 'fixed' as 'fixed',
+      top: 0,
+      width: '100%',
+      backgroundColor: '#ffffff',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '15px 60px',
+      zIndex: 1000,
+      boxShadow: '0 2px 15px rgba(0,0,0,0.05)',
+      borderBottom: '1px solid #f0f0f0'
+    },
+    hero: {
+      height: '100vh',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      backgroundImage: 'linear-gradient(to right, rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.2)), url("https://denticare.bold-themes.com/allen/wp-content/uploads/sites/17/2020/01/hero_home_01.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      padding: '0 100px',
+      color: '#ffffff'
+    },
+    cardContainer: {
+      display: 'flex',
+      maxWidth: '1200px',
+      margin: '-100px auto 50px',
+      position: 'relative' as 'relative',
+      zIndex: 10,
+      borderRadius: '20px',
+      overflow: 'hidden',
+      boxShadow: '0 30px 60px rgba(0,0,0,0.15)'
+    },
+    card: (bg: string) => ({
+      backgroundColor: bg,
+      padding: '50px 40px',
+      flex: 1,
+      color: '#ffffff',
+      textAlign: 'left' as 'left'
+    })
+  };
+
   return (
-    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', fontFamily: 'sans-serif' }}>
-      {/* External Resources */}
-      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <div style={{ margin: 0, padding: 0, backgroundColor: '#f9fafb', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white shadow-sm px-10 py-5 flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter text-blue-900">
-          DENTI<span className="text-pink-500">CARE</span>
+      <nav style={styles.nav}>
+        <div style={{ fontSize: '26px', fontWeight: 900, color: '#1e3a8a', letterSpacing: '-1.5px' }}>
+          DENTI<span style={{ color: '#ec4899' }}>CARE</span>
         </div>
-        <div className="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-gray-400">
-          <a href="#" className="hover:text-blue-900">Home</a>
-          <a href="#" className="hover:text-blue-900">Services</a>
-          <a href="#" className="hover:text-blue-900">Doctors</a>
+        <div style={{ display: 'flex', gap: '40px', fontSize: '13px', fontWeight: 'bold', color: '#4b5563', textTransform: 'uppercase' }}>
+          <span>Home</span>
+          <span>Services</span>
+          <span>About</span>
         </div>
-        <button className="bg-pink-500 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-900 transition-all shadow-lg">
-          Book Appointment
+        <button style={{ backgroundColor: '#ec4899', color: '#fff', border: 'none', padding: '12px 30px', borderRadius: '50px', fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+          BOOK NOW
         </button>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center px-10 md:px-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/17/2020/01/hero_home_01.jpg" 
-            className="w-full h-full object-cover"
-            style={{ filter: 'brightness(0.7)' }}
-            alt="Dental Clinic"
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-4xl">
-          <p className="text-pink-400 font-bold tracking-[0.3em] uppercase mb-6">
+      <header style={styles.hero}>
+        <div style={{ maxWidth: '700px' }}>
+          <p style={{ color: '#f472b6', fontWeight: 'bold', letterSpacing: '5px', textTransform: 'uppercase', marginBottom: '20px' }}>
             Committed To Excellence
           </p>
-          <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight mb-10">
+          <h1 style={{ fontSize: '90px', margin: 0, lineHeight: 1, fontWeight: 900 }}>
             Personalized &<br />Comfortable
           </h1>
-          <div className="flex gap-6">
-            <button className="bg-white text-blue-900 px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-pink-500 hover:text-white transition-all shadow-2xl">
-              Our Process →
+          <div style={{ marginTop: '50px', display: 'flex', gap: '20px' }}>
+            <button style={{ padding: '20px 45px', borderRadius: '50px', border: 'none', backgroundColor: '#ffffff', color: '#1e3a8a', fontWeight: '900', fontSize: '15px', cursor: 'pointer', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
+              OUR PROCESS →
             </button>
           </div>
         </div>
+      </header>
+
+      {/* Overlapping Info Cards */}
+      <section style={styles.cardContainer}>
+        <div style={styles.card('#2563eb')}>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '22px' }}>CERTIFIED DENTISTS</h3>
+          <p style={{ opacity: 0.8, fontSize: '14px', lineHeight: 1.6 }}>Professional dental care from our board-certified experts.</p>
+        </div>
+        <div style={styles.card('#ec4899')}>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '22px' }}>NEW TECHNOLOGY</h3>
+          <p style={{ opacity: 0.8, fontSize: '14px', lineHeight: 1.6 }}>Modern tools for a painless and precise treatment experience.</p>
+        </div>
+        <div style={styles.card('#1e3a8a')}>
+          <h3 style={{ margin: '0 0 15px 0', fontSize: '22px' }}>ACCEPTING PATIENTS</h3>
+          <p style={{ opacity: 0.8, fontSize: '14px', lineHeight: 1.6 }}>We are currently welcoming new patients for all treatments.</p>
+        </div>
       </section>
 
-      {/* Features - Overlapping Style like Bold Themes */}
-      <section className="relative z-20 -mt-20 px-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl rounded-2xl overflow-hidden">
-        <div className="bg-blue-600 p-12 text-white border-r border-blue-500">
-          <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Certified Dentists</h3>
-          <p className="opacity-70 text-sm leading-relaxed">Our team of experts ensures you get the best dental care possible.</p>
-        </div>
-        <div className="bg-pink-500 p-12 text-white border-r border-pink-400">
-          <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">New Technology</h3>
-          <p className="opacity-70 text-sm leading-relaxed">Advanced tools for a painless and comfortable experience.</p>
-        </div>
-        <div className="bg-blue-900 p-12 text-white">
-          <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Accepting Patients</h3>
-          <p className="opacity-70 text-sm leading-relaxed">We are currently accepting new patients. Book your slot today.</p>
-        </div>
-      </section>
-
-      {/* Spacing for bottom */}
-      <div className="py-20"></div>
+      <div style={{ height: '100px' }}></div>
     </div>
   );
 }
