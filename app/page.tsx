@@ -1,4 +1,4 @@
-[11:25 pm, 25/04/2026] Dad: import React from 'react';
+import React from 'react';
 
 export default function Home() {
   return (
